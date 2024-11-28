@@ -4,20 +4,56 @@
   "vehicles": [
     {
       "name": "Boid.Boid",
-      "position": [-5,-5],
+      "position": [5,5],
       "draw_scan_lines": "true",
       "resource": "001"
     },
     {
       "name": "Boid.Boid",
-      "position": [-3,-5],
+      "position": [-5,-5],
       "draw_scan_lines": "true",
       "resource": "002"
+    },
+    {
+      "name": "Boid.Boid",
+      "position": [-5,5],
+      "draw_scan_lines": "true",
+      "resource": "003"
+    },
+    {
+      "name": "Boid.Boid",
+      "position": [5,-5],
+      "draw_scan_lines": "true",
+      "resource": "004"
+    },
+    {
+      "name": "Boid.Boid",
+      "position": [-10,-10],
+      "draw_scan_lines": "true",
+      "resource": "005"
+    },
+    {
+      "name": "Boid.Boid",
+      "position": [10,10],
+      "draw_scan_lines": "true",
+      "resource": "006"
     }
   ],
   "obstacles": [
     {
-      "position": [-10,-10],
+      "position": [-20,-20],
+      "size": [2,4]
+    },
+    {
+      "position": [20,20],
+      "size": [2,4]
+    },
+    {
+      "position": [20,-20],
+      "size": [2,4]
+    },
+    {
+      "position": [-20,20],
       "size": [2,4]
     }
   ]
