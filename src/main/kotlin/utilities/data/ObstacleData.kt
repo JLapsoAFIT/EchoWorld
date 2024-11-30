@@ -1,6 +1,8 @@
 package utilities.data
 
 import kotlinx.serialization.Serializable
+import utilities.enums.Locations
+import kotlin.random.Random
 
 /**
  * A serializable data class for Obstacles utilized in [Vehicles]
@@ -14,5 +16,8 @@ import kotlinx.serialization.Serializable
 data class ObstacleData(
     val size: List<Int>,
     val bound_key: Int? = null,
-    override val position: List<Int>
+    override val position: List<Int> = listOf(
+        Random.nextInt(Locations.DEFAULT.range[0], Locations.DEFAULT.range[1]),
+        Random.nextInt(Locations.DEFAULT.range[0], Locations.DEFAULT.range[1])
+    )
 ) : AbstractData()

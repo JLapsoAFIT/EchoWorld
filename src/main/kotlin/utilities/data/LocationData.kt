@@ -1,6 +1,8 @@
 package utilities.data
 
 import kotlinx.serialization.Serializable
+import utilities.enums.Locations
+import kotlin.random.Random
 
 /**
  * A serializable data class for location objects utilized in [Ants]
@@ -12,5 +14,8 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class LocationData(
     val distribution: List<Int>,
-    override val position: List<Int>
+    override val position: List<Int> = listOf(
+        Random.nextInt(Locations.DEFAULT.range[0], Locations.DEFAULT.range[1]),
+        Random.nextInt(Locations.DEFAULT.range[0], Locations.DEFAULT.range[1])
+    )
 ): AbstractData()

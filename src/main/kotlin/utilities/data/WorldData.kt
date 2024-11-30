@@ -1,7 +1,6 @@
 package utilities.data
 
 import kotlinx.serialization.Serializable
-
 /**
  * A serializable data class for world files
  * @author Joshua A. Lapso
@@ -12,6 +11,7 @@ import kotlinx.serialization.Serializable
  * @param lights Optional Array
  * @param obstacles Optional Array
  * @param food Optional Array
+ * @param homes Optional Array
  */
 
 @Serializable
@@ -21,5 +21,6 @@ data class WorldData(
     val vehicles: List<VehicleData>,
     val lights: List<LightData>,
     val obstacles: List<ObstacleData>,
-    val food: List<FoodData>
+    val food: List<FoodData>,
+    val homes: List<HomeData>
 )
